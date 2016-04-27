@@ -36,13 +36,11 @@ $res = $conn->query($sql);
                 <?php while ($row = $res->fetch_assoc()){ ?>
                     <tr>
                         <td><?php echo $row["id"] ?></td>
-                        <td><div class="label<?php echo $row["id"] ?>"><?php echo $row["name"] ?></div><input type="text" style="display: none;"  value="<?php echo $row["name"] ?>" class="name_input input<?php echo $row["id"] ?>"></td>
-                        <td><div class="label<?php echo $row["id"] ?>"><?php echo $row["price"] ?></div><input type="text" style="display: none;"  value="<?php echo $row["price"] ?>" class="price_input input<?php echo $row["id"] ?>"></td>
-                        <td><button data-id="<?php echo $row["id"] ?>" class="deleteBtn">Delete</button></td>
+                        <td><?php echo $row["name"] ?></td>
+                        <td><?php echo $row["price"] ?></td>
+                        <td><button class="deleteBtn">Delete</button></td>
                         <td>
-                            <button data-id="<?php echo $row["id"] ?>" class="editBtn">edit</button>
-                            <button data-id="<?php echo $row["id"] ?>" style="display: none" class="updateBtns updateBtn">update</button>
-                            <button data-id="<?php echo $row["id"] ?>" style="display: none" class="updateBtns cancelBtn">cancel</button>
+                            <button class="editBtn">edit</button>
                         </td>
                     </tr>
                 <?php }?>
